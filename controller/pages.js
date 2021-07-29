@@ -12,7 +12,7 @@ const router = express.Router();
 router.get('/', (req, res) => {
     ct1products.find()
     .then(results => {
-        res.render('index', {products: results, pageTitle: 'Best Movies in 2021'});
+        res.render('index', {products: results, pageTitle: 'Eats'});
     })
     .catch(err => console.log(err));  
 }); 
@@ -20,7 +20,7 @@ router.get('/', (req, res) => {
 router.get('/best/:prodId', (req, res) => {
     ct1products.findById(req.params.prodId)
         .then(result => {
-            res.render('best-details', {prod: result, pageTitle: 'One of the Best Movies in 2021'});
+            res.render('best-details', {prod: result, pageTitle: 'One of the Eats'});
         })
         .catch(err => console.log(err));  
 });
@@ -29,7 +29,7 @@ router.get('/family', (req, res) => {
     //res.render('family');
     ct2products.find()
     .then(results => {
-        res.render('family', {products: results, pageTitle: 'Family Movies'});
+        res.render('family', {products: results, pageTitle: 'Tea'});
     })
     .catch(err => console.log(err));  
 });
@@ -37,7 +37,7 @@ router.get('/family', (req, res) => {
 router.get('/family/:prodId', (req, res) => {
     ct2products.findById(req.params.prodId)
         .then(result => {
-            res.render('family-details', {prod: result, pageTitle: 'One of the Family Movies'});
+            res.render('family-details', {prod: result, pageTitle: 'One of the Teas'});
         })
         .catch(err => console.log(err));  
 });
@@ -61,6 +61,10 @@ router.get('/coffee/:prodId', (req, res) => {
 
 router.get('/contactUs', (req, res) => {
     res.render('contactUs');
+});
+
+router.get('/home', (req, res) => {
+    res.render('home');
 });
 
 module.exports = router;
