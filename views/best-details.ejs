@@ -1,0 +1,20 @@
+<%- include('layouts/header.ejs') %>
+<%- include('layouts/navigation.ejs') %>
+
+<div class="container">
+    <br><h4><strong><%= pageTitle %></strong></h4><br>
+    <div class="row">
+        <div class="col">
+            <a href="/img/<%=prod.img %>"> <img class="card-img-top" src="/img/<%= prod.img %>" alt="Card image cap"></a>
+        </div>
+        <div class="col">
+            <h5><strong><%= prod.title %></strong></h5>
+            <h6><strong><%= prod.price %></strong></h6>
+            <h5><strong><%= prod.quantity %></strong></h5>
+            <p><%= prod.description %></p>
+            <a href="#!" class="btn btn-primary">Add To Cart</a>
+        </div>
+    </div>
+</div>
+
+<%- include('layouts/footer.ejs') %>
