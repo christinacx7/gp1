@@ -15,7 +15,7 @@ app.use('/', pagesRouter);
 
 mongoose.connect('mongodb://localhost:27017/ShopDB' , {useNewUrlParser: true, useUnifiedTopology: true})
     .then(() => {
-        app.listen(5000, () => {
+        app.listen(5500, () => {
             console.log('MongoDB is connected and Express server is running');
     });
 });
